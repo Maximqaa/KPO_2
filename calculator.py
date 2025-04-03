@@ -152,45 +152,38 @@ class CalculatorUI:
 
         self.root.bind("<BackSpace>", lambda event: self.delete_last_character())
 
-    def create_display_labels(self):
-        """
-        Создание меток для отображения ввода и результата.
-        :return: Кортеж из двух меток (total_label, label).
-        """
-        total_label = tk.Label(self.display_frame, text=self.calculator_logic.get_total_expression(), anchor=tk.E,
-                               bg="#f0f0f0",
-                               fg="#666666", padx=24, font=("Arial", 16))
-        total_label.pack(expand=True, fill='both')
-
-        label = tk.Label(self.display_frame, text=self.calculator_logic.get_current_expression(), anchor=tk.E,
-                         bg="#f0f0f0",
-                         fg="#000000", padx=24, font=("Arial", 40, "bold"))
-        label.pack(expand=True, fill='both')
-
-        return total_label, label
-
     def create_display_frame(self):
         """
         Создание фрейма для отображения ввода и результата.
-        :return: Фрейм для отображения.
+        
+        Returns:
+            tk.Frame: Фрейм для отображения.
         """
         frame = tk.Frame(self.root, height=221, bg="#f0f0f0")
         frame.pack(expand=True, fill="both")
+        
         return frame
+
 
     def create_buttons_frame(self):
         """
         Создание фрейма для кнопок.
-        :return: Фрейм для кнопок.
+        
+        Returns:
+            tk.Frame: Фрейм с кнопками.
         """
         frame = tk.Frame(self.root)
         frame.pack(expand=True, fill="both")
+        
         return frame
+
 
     def add_to_expression(self, value):
         """
         Добавление символа в текущее выражение.
-        :param value: Символ для добавления.
+        
+        Args:
+            value (str): Символ для добавления.
         """
         self.calculator_logic.add_to_expression(value)
         self.update_display()
