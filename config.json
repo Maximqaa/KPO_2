@@ -1,0 +1,43 @@
+{
+  "window": {
+    "width": 400,
+    "height": 550,
+    "resizable": false
+  },
+  "theme": "light",
+  "themes": {
+    "light": {
+      "background": "#f0f0f0",
+      "button_background": "#ffffff",
+      "text_color": "#000000",
+      "font": "Arial",
+      "font_size": 18
+    },
+    "dark": {
+      "background": "#2e2e2e",
+      "button_background": "#4d4d4d",
+      "text_color": "#ffffff",
+      "font": "Arial",
+      "font_size": 18
+    },
+    "high_contrast": {
+      "background": "#000000",
+      "button_background": "#ffff00",
+      "text_color": "#ff0000",
+      "font": "Arial",
+      "font_size": 24
+    }
+  },
+  "sound": {
+    "enabled": true,
+    "file": "button_hover.wav"
+  },
+  "database": {
+    "enabled": false,
+    "host": "localhost",
+    "port": 3306,
+    "user": "root",
+    "password": "",
+    "database_name": ""
+  }
+}
