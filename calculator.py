@@ -330,7 +330,7 @@ class CalculatorUI:
 
     def run(self):
         """
-        Запуск приложения.
+        Запуск rfkmrekznjhf.
         """
         self.root.mainloop()
 
